@@ -10,26 +10,6 @@ This project consists of three main components:
 2. **TestOperations** - Unit test suite for validating the vector math library
 3. **Pong** - A Unity game implementation that uses the vector math DLL via P/Invoke to handle game physics
 
-## Project Structure
-
-```
-VectorAssignment/
-├── VectorAssignment/          # Native C++ DLL project
-│   ├── Vec3.h                # Vector math header with all function declarations
-│   └── Vec3.cpp              # Implementation file
-├── TestOperations/           # Test suite project
-│   └── Vec3Tests.cpp         # Unit tests for vector operations
-├── Pong/                     # Unity game project
-│   └── Assets/
-│       └── Scripts/
-│           ├── PongVector.cs      # P/Invoke wrapper for DLL functions
-│           ├── BallController.cs  # Ball physics and collision handling
-│           ├── PaddleController.cs # Player paddle input handling
-│           ├── PaddleAI.cs        # AI-controlled paddle
-│           └── GameManager.cs     # Game state and scoring
-└── bin/                      # Build output directory
-```
-
 ## Components
 
 ### 1. VectorAssignment DLL
