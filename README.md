@@ -238,10 +238,24 @@ Potential improvements:
 - Add more comprehensive unit tests
 - Performance benchmarking
 
-## License
+## Importance of Vectors and Matrices in Games
 
-This project is provided as-is for educational and demonstration purposes.
+Understanding the math behind the code is essential for game physics and rendering. This project implements the fundamental building blocks used by modern game engines.
 
-## Author
+### 1. Vectors: Direction and Force
+Vectors are used to define more than just a point in space; they represent the "physicality" of game objects:
+* **Velocity:** The ball’s movement is a direction vector multiplied by a speed scalar.
+* **Surface Normals:** These are unit vectors perpendicular to a surface. When the ball hits a paddle, the normal is used to calculate the bounce.
+* **Dot Product:** Used to find the angle between two vectors. In many games, this determines if an object is within a player's field of view or how light reflects off a surface.
+* **Reflection:** The core physics of this Pong implementation uses the mathematical reflection formula:
+    $$r = v - 2(v \cdot n)n$$
+    Where $v$ is the incoming velocity and $n$ is the surface normal.
 
-Vector Assignment Project - Demonstrating native DLL development and Unity interop.
+
+
+### 2. Matrices: Transformation and Space
+While vectors store data, matrices perform **Transformations**. Every object in Unity has a "Transform" component, which is a $4 \times 4$ matrix used to calculate:
+* **Translation:** Moving the paddle from its local origin to its world position.
+* **Rotation:** Pivoting an object around an axis.
+* **Scaling:** Adjusting the size of game assets.
+* **Projection:** Converting 3D world coordinates into 2D screen coordinates so they can be rendered on a monitor.
