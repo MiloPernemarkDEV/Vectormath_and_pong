@@ -231,12 +231,7 @@ The Pong game implements:
 ## Future Enhancements
 
 Potential improvements:
-- Add more vector operations (rotation, matrix transformations)
-- Implement 3D game example using Vec3 operations
 - Add SIMD optimizations for vector operations
-- Cross-platform support (Linux, macOS)
-- Add more comprehensive unit tests
-- Performance benchmarking
 
 ## Importance of Vectors and Matrices in Games
 
